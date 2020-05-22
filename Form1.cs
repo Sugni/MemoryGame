@@ -53,6 +53,7 @@ namespace MemoryGame
 
         private void CheckIfEqual(object sender, EventArgs e)
         {
+            labelTimer.Stop();
             if (label1.Text == label2.Text)
             {
                 label1.ForeColor = Color.Green;
@@ -70,7 +71,6 @@ namespace MemoryGame
                 label2 = null;
             }
             CheckWin();
-            labelTimer.Stop();
         }
 
         private void CheckWin()
